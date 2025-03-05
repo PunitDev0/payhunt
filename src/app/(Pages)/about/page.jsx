@@ -2,6 +2,7 @@ import { ArrowRight, Award, BarChart, Clock, Globe, Shield, Users } from 'lucide
 import { Button } from "@/components/ui/button";
 import PageHeader from "@/components/page-header";
 import TeamMember from "@/components/team-member";
+import Image from 'next/image';
 
 export default function AboutPage() {
   return (
@@ -31,10 +32,13 @@ export default function AboutPage() {
           </div>
           <div className="relative">
             <div className="aspect-video bg-gradient-to-br from-primary/20 to-primary/10 rounded-xl flex items-center justify-center">
-              <img 
-                src="/placeholder.svg?height=300&width=500" 
+              <Image 
+                src="/images/team.jpg" 
                 alt="PayHunt Team" 
                 className="rounded-lg shadow-lg max-w-[90%] mx-auto"
+                width={500}
+                height={300}
+                priority
               />
             </div>
           </div>
@@ -129,42 +133,42 @@ export default function AboutPage() {
             name="Sarah Johnson"
             position="CEO & Co-Founder"
             bio="Sarah has over 15 years of experience in fintech and previously founded two successful startups."
-            image="/placeholder.svg?height=300&width=300"
+            image="/images/sarah.jpg"
           />
           
           <TeamMember 
             name="Michael Chen"
             position="CTO & Co-Founder"
             bio="Michael is a seasoned engineer with expertise in building scalable payment systems and security infrastructure."
-            image="/placeholder.svg?height=300&width=300"
+            image="/images/michael.jpg"
           />
           
           <TeamMember 
             name="Elena Rodriguez"
             position="COO"
             bio="Elena brings 12 years of operational experience from leading global payment companies."
-            image="/placeholder.svg?height=300&width=300"
+            image="/images/elena.jpg"
           />
           
           <TeamMember 
             name="David Kim"
             position="CFO"
             bio="David has extensive experience in financial management and previously worked at top investment banks."
-            image="/placeholder.svg?height=300&width=300"
+            image="/images/david.jpg"
           />
           
           <TeamMember 
             name="Priya Patel"
             position="VP of Product"
             bio="Priya leads our product team with a focus on creating intuitive and powerful payment solutions."
-            image="/placeholder.svg?height=300&width=300"
+            image="/images/priya.jpg"
           />
           
           <TeamMember 
             name="James Wilson"
             position="VP of Engineering"
             bio="James oversees our engineering team and ensures the reliability and scalability of our platform."
-            image="/placeholder.svg?height=300&width=300"
+            image="/images/james.jpg"
           />
         </div>
       </section>
@@ -248,25 +252,33 @@ export default function AboutPage() {
             </div>
           </div>
           <div className="grid grid-cols-2 gap-4">
-            <img 
-              src="/placeholder.svg?height=200&width=200" 
+            <Image 
+              src="/images/team1.jpg" 
               alt="Team Member" 
               className="rounded-lg shadow-lg"
+              width={200}
+              height={200}
             />
-            <img 
-              src="/placeholder.svg?height=200&width=200" 
+            <Image 
+              src="/images/team2.jpg" 
               alt="Team Member" 
               className="rounded-lg shadow-lg"
+              width={200}
+              height={200}
             />
-            <img 
-              src="/placeholder.svg?height=200&width=200" 
+            <Image 
+              src="/images/team3.jpg" 
               alt="Team Member" 
               className="rounded-lg shadow-lg"
+              width={200}
+              height={200}
             />
-            <img 
-              src="/placeholder.svg?height=200&width=200" 
+            <Image 
+              src="/images/team4.jpg" 
               alt="Team Member" 
               className="rounded-lg shadow-lg"
+              width={200}
+              height={200}
             />
           </div>
         </div>
