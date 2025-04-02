@@ -4,17 +4,27 @@ import { useState } from "react";
 import Link from "next/link";
 import { Menu, X } from 'lucide-react';
 import { Button } from "@/components/ui/button";
+import Image from "next/image";
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <header className="fixed w-full bg-white/80 backdrop-blur-md z-50 border-b border-gray-200">
+    <header className="fixed w-full bg-gradient-to-r text-white bg-[#43b2a8] backdrop-blur-md z-50 border-b border-gray-200">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center">
             <Link href="/" className="flex items-center">
-              <span className="text-2xl font-bold text-primary">PeHunt</span>
+              {/* <Image 
+                src="/PeAvenue-new-logo.png"
+                alt="PayHunt"
+                width={150}
+                height={150}
+                className="mr-10"
+                unoptimized
+               /> */}
+               <h1 className="text-2xl">PeAvenue</h1>
+               {/* <h1 className="font-bold text-2xl  drop-shadow-lg">PeAvenue</h1> */}
             </Link>
           </div>
           
@@ -22,27 +32,25 @@ export default function Navbar() {
             <Link href="/products" className="text-sm font-medium hover:text-primary transition-colors">
               Products
             </Link>
-            <Link href="/pricing" className="text-sm font-medium hover:text-primary transition-colors">
-              Pricing
-            </Link>
-            <Link href="/developers" className="text-sm font-medium hover:text-primary transition-colors">
-              Developers
-            </Link>
+           
             <Link href="/about" className="text-sm font-medium hover:text-primary transition-colors">
               About
             </Link>
             <Link href="/support" className="text-sm font-medium hover:text-primary transition-colors">
               Support
             </Link>
+            <Link href="/" className="text-sm font-medium hover:text-primary transition-colors">
+               Docs
+            </Link>
           </nav>
           
           <div className="hidden md:flex items-center space-x-4">
+            <Link href={'https://member.PeAvenue.in/'} >
             <Button variant="ghost" size="sm">
               Log In
             </Button>
-            <Button size="sm">
-              Sign Up
-            </Button>
+            </Link>
+          
           </div>
           
           <div className="md:hidden">
@@ -72,20 +80,7 @@ export default function Navbar() {
             >
               Products
             </Link>
-            <Link 
-              href="/pricing" 
-              className="block text-sm font-medium hover:text-primary transition-colors"
-              onClick={() => setIsMenuOpen(false)}
-            >
-              Pricing
-            </Link>
-            <Link 
-              href="/developers" 
-              className="block text-sm font-medium hover:text-primary transition-colors"
-              onClick={() => setIsMenuOpen(false)}
-            >
-              Developers
-            </Link>
+           
             <Link 
               href="/about" 
               className="block text-sm font-medium hover:text-primary transition-colors"
@@ -100,14 +95,7 @@ export default function Navbar() {
             >
               Support
             </Link>
-            <div className="pt-4 flex flex-col space-y-2">
-              <Button variant="ghost" size="sm" className="justify-center">
-                Log In
-              </Button>
-              <Button size="sm" className="justify-center">
-                Sign Up
-              </Button>
-            </div>
+           
           </div>
         </div>
       )}

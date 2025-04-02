@@ -1,5 +1,5 @@
 import { Geist, Geist_Mono } from "next/font/google";
-import "./globals.css";
+import "../../globals.css";
 import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
 
@@ -14,8 +14,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "Best Digital Payment gateway Provider In India",
-  description: "we are the best payment gateway provider with 100+ payment modes, Perfect for e-commerce, education,  payouts, UPI Pay, Link Pay, and QR Pay.",
+  title: "Powering India's Digital Payments & API Banking in India",
+  description: "Integrate 100+ payment modes seamlessly with our secure payment gateways. Perfect for e-commerce, education, retail, apps, wallets, and B2B service payouts, UPI Pay, Link Pay, and QR Pay.",
 };
 
 export default function RootLayout({ children }) {
@@ -23,15 +23,10 @@ export default function RootLayout({ children }) {
     <html lang="en">
        <body className="bg-gray-50 text-gray-900 antialiased">
         <div className="flex min-h-screen flex-col">
-          <header>
-            <Navbar />
-          </header>
           <main className="flex-1 pt-16">
             {children}
           </main>
-          <footer>
-            <Footer />
-          </footer>
+         
         </div>
       </body>
     </html>

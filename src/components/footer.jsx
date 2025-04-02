@@ -3,12 +3,12 @@ import { Facebook, Twitter, Instagram, Linkedin, Github } from 'lucide-react';
 
 export default function Footer() {
   return (
-    <footer className="bg-slate-900 text-white pt-16 pb-8">
+    <footer className=" text-white bg-gradient-to-br from-[#43B2A8] via-[#2b645f] to-[#23504c] pt-16 pb-8">
       <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 mb-12">
+        <div className="flex justify-between  gap-8 mb-12">
           <div className="lg:col-span-2">
             <Link href="/" className="inline-block mb-4">
-              <span className="text-2xl font-bold text-white">PayHunt</span>
+              <span className="text-2xl font-bold text-white">PeAvenue</span>
             </Link>
             <p className="text-slate-300 mb-6 max-w-md">
               A complete payment solution to accept, process, and disburse payments with simple integration and transparent pricing.
@@ -37,67 +37,8 @@ export default function Footer() {
             </div>
           </div>
           
-          <div>
-            <h3 className="text-lg font-semibold mb-4">Products</h3>
-            <ul className="space-y-2">
-              <li>
-                <Link href="/products" className="text-slate-300 hover:text-white transition-colors">
-                  Payment Gateway
-                </Link>
-              </li>
-              <li>
-                <Link href="/products" className="text-slate-300 hover:text-white transition-colors">
-                  Payment Links
-                </Link>
-              </li>
-              <li>
-                <Link href="/products" className="text-slate-300 hover:text-white transition-colors">
-                  Subscription Billing
-                </Link>
-              </li>
-              <li>
-                <Link href="/products" className="text-slate-300 hover:text-white transition-colors">
-                  Invoicing
-                </Link>
-              </li>
-              <li>
-                <Link href="/products" className="text-slate-300 hover:text-white transition-colors">
-                  Payouts
-                </Link>
-              </li>
-            </ul>
-          </div>
-          
-          <div>
-            <h3 className="text-lg font-semibold mb-4">Resources</h3>
-            <ul className="space-y-2">
-              <li>
-                <Link href="/developers" className="text-slate-300 hover:text-white transition-colors">
-                  Documentation
-                </Link>
-              </li>
-              <li>
-                <Link href="/developers" className="text-slate-300 hover:text-white transition-colors">
-                  API Reference
-                </Link>
-              </li>
-              <li>
-                <Link href="/developers" className="text-slate-300 hover:text-white transition-colors">
-                  SDKs & Libraries
-                </Link>
-              </li>
-              <li>
-                <Link href="#" className="text-slate-300 hover:text-white transition-colors">
-                  Blog
-                </Link>
-              </li>
-              <li>
-                <Link href="#" className="text-slate-300 hover:text-white transition-colors">
-                  Case Studies
-                </Link>
-              </li>
-            </ul>
-          </div>
+        
+        
           
           <div>
             <h3 className="text-lg font-semibold mb-4">Company</h3>
@@ -117,16 +58,7 @@ export default function Footer() {
                   Contact
                 </Link>
               </li>
-              <li>
-                <Link href="#" className="text-slate-300 hover:text-white transition-colors">
-                  Partners
-                </Link>
-              </li>
-              <li>
-                <Link href="#" className="text-slate-300 hover:text-white transition-colors">
-                  Press
-                </Link>
-              </li>
+             
             </ul>
           </div>
         </div>

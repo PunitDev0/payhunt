@@ -14,7 +14,7 @@ export default function HeroSection() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 lg:gap-16 items-center">
           {/* Left Column */}
           <div className="space-y-6 md:space-y-8 text-center lg:text-left">
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight mb-6 bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 bg-clip-text text-transparent leading-tight drop-shadow-md">
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight mb-6 text-[#43B2A8] bg-clip-text  leading-tight drop-shadow-md">
               Simplifying Payments for Businesses
             </h1>
             <p className="text-lg sm:text-xl text-gray-600 mb-8 max-w-md mx-auto lg:mx-0 leading-relaxed font-medium bg-white/80 backdrop-blur-sm p-4 rounded-lg shadow-sm">
@@ -23,7 +23,7 @@ export default function HeroSection() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
               <Button 
                 size="lg" 
-                className="px-8 bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
+                className="px-8 bg-gradient-to-r text-[#43B2A8] font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
               >
                 Get Started
               </Button>

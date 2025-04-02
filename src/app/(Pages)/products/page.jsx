@@ -4,75 +4,121 @@ import { Button } from "@/components/ui/button";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { CheckCircle2 } from 'lucide-react';
 import PageHeader from "@/components/page-header";
+import Head from "next/head";
 
 export default function ProductsPage() {
   return (
     <>
+    <Head>
+        <title>My Page Title</title>
+        <meta name="description" content="This is the description of my page." />
+      </Head>
       <PageHeader 
-        title="Our Products" 
-        description="Comprehensive payment solutions for businesses of all sizes"
+        title="Seamless & Secure Payment Solutions for Your Business" 
+        description="Experience a hassle-free and secure payment gateway that allows businesses to accept and process payments seamlessly across e-commerce, education, retail, mobile apps, wallets, and B2B service payouts."
       />
       
       {/* Products Overview */}
       <section className="container mx-auto px-4 py-12">
         <Tabs defaultValue="gateway" className="w-full">
-          <TabsList className="grid w-full grid-cols-2 md:grid-cols-4 mb-8">
+          <TabsList className="grid w-full grid-cols-2 md:grid-cols-5 mb-8">
             <TabsTrigger value="gateway">Payment Gateway</TabsTrigger>
+            <TabsTrigger value="upi-qr">UPI & QR Payments</TabsTrigger>
             <TabsTrigger value="links">Payment Links</TabsTrigger>
-            <TabsTrigger value="subscription">Subscription</TabsTrigger>
-            <TabsTrigger value="invoicing">Invoicing</TabsTrigger>
+            <TabsTrigger value="subscription">Subscription Payments</TabsTrigger>
+            <TabsTrigger value="b2b">B2B Solutions</TabsTrigger>
           </TabsList>
           
           <TabsContent value="gateway" className="mt-4">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
               <div>
-                <h3 className="text-2xl font-bold mb-4">Accept Payments Globally</h3>
+                <h2 className="text-2xl font-bold mb-4">Why Choose Our Payment Gateway?</h2>
                 <p className="text-muted-foreground mb-6">
-                  Our payment gateway enables you to accept payments from customers worldwide with support for multiple payment methods and currencies.
+                  Our advanced online payment processing solution supports all major payment methods including Credit/Debit Cards, Net Banking, and Mobile Wallets for a seamless checkout experience.
                 </p>
                 <ul className="space-y-4">
                   <li className="flex items-start">
                     <CheckCircle2 className="h-5 w-5 text-primary mr-2 mt-0.5" />
-                    <span>Support for 100+ payment methods including credit cards, digital wallets, and UPI</span>
+                    <span>Instant & Secure Transactions with advanced encryption</span>
                   </li>
                   <li className="flex items-start">
                     <CheckCircle2 className="h-5 w-5 text-primary mr-2 mt-0.5" />
-                    <span>Process transactions in 135+ currencies with automatic conversion</span>
+                    <span>Easy Integration with API & Plugins for websites and apps</span>
                   </li>
                   <li className="flex items-start">
                     <CheckCircle2 className="h-5 w-5 text-primary mr-2 mt-0.5" />
-                    <span>Seamless checkout experience with smart routing for higher success rates</span>
+                    <span>Multi-Channel Payment Acceptance (online, in-store, mobile)</span>
                   </li>
                   <li className="flex items-start">
                     <CheckCircle2 className="h-5 w-5 text-primary mr-2 mt-0.5" />
-                    <span>Advanced fraud detection and prevention tools</span>
+                    <span>Accept payments from Visa, MasterCard, RuPay, and more</span>
                   </li>
                   <li className="flex items-start">
                     <CheckCircle2 className="h-5 w-5 text-primary mr-2 mt-0.5" />
-                    <span>Real-time transaction monitoring and detailed analytics</span>
+                    <span>Net Banking from all leading banks in India</span>
                   </li>
                   <li className="flex items-start">
                     <CheckCircle2 className="h-5 w-5 text-primary mr-2 mt-0.5" />
-                    <span>PCI-DSS Level 1 compliance for secure payment processing</span>
+                    <span>Support for Paytm, PhonePe, Google Pay, and other wallets</span>
                   </li>
                 </ul>
                 <div className="mt-6 flex flex-wrap gap-4">
-                  <Button>
-                    Get Started
-                  </Button>
+                  <Button>Get Started</Button>
                   <Link href="/pricing">
-                    <Button variant="outline">
-                      View Pricing
-                    </Button>
+                    <Button variant="outline">View Pricing</Button>
                   </Link>
                 </div>
               </div>
               <div className="relative">
                 <div className="aspect-video bg-gradient-to-br from-primary/20 to-primary/10 rounded-xl flex items-center justify-center">
                   <img 
-                    src="/placeholder.svg?height=300&width=500" 
+                    src="https://t4.ftcdn.net/jpg/10/63/67/89/240_F_1063678906_v3S7FFfatWGl1vv5KGeMHm3NLFPMcXZX.jpg" 
                     alt="Payment Gateway Interface" 
-                    className="rounded-lg shadow-lg max-w-[90%] mx-auto"
+                    className="rounded-lg shadow-lg h-full w-full mx-auto"
+                  />
+                </div>
+              </div>
+            </div>
+          </TabsContent>
+          
+          <TabsContent value="upi-qr" className="mt-4">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+              <div>
+                <h3 className="text-2xl font-bold mb-4">UPI & QR Payments</h3>
+                <p className="text-muted-foreground mb-6">
+                  Enable instant, real-time payments through UPI and QR codes, making transactions faster and more convenient for customers.
+                </p>
+                <ul className="space-y-4">
+                  <li className="flex items-start">
+                    <CheckCircle2 className="h-5 w-5 text-primary mr-2 mt-0.5" />
+                    <span>UPI Pay: Instant payments via UPI IDs</span>
+                  </li>
+                  <li className="flex items-start">
+                    <CheckCircle2 className="h-5 w-5 text-primary mr-2 mt-0.5" />
+                    <span>QR Pay: Scan-to-pay with Bharat QR and custom QR codes</span>
+                  </li>
+                  <li className="flex items-start">
+                    <CheckCircle2 className="h-5 w-5 text-primary mr-2 mt-0.5" />
+                    <span>No card details required for secure transactions</span>
+                  </li>
+                  <li className="flex items-start">
+                    <CheckCircle2 className="h-5 w-5 text-primary mr-2 mt-0.5" />
+                    <span>Interoperable QR-based payment system</span>
+                  </li>
+                </ul>
+                <div className="mt-6 flex flex-wrap gap-4">
+                  <Button>Get Started</Button>
+                  <Link href="/pricing">
+                    <Button variant="outline">View Pricing</Button>
+                  </Link>
+                </div>
+              </div>
+              <div className="relative">
+                <div className="aspect-video bg-gradient-to-br from-primary/20 to-primary/10 rounded-xl flex items-center justify-center">
+                  <img 
+                    src="https://as1.ftcdn.net/v2/jpg/04/60/36/80/1000_F_460368094_znffKCOlOMYO2XONVl3QmOA6IoARmx4C.jpg" 
+                    alt="UPI & QR Payments Interface" 
+                    className="rounded-lg shadow-lg w-full h-full mx-auto"
                   />
                 </div>
               </div>
@@ -82,53 +128,41 @@ export default function ProductsPage() {
           <TabsContent value="links" className="mt-4">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
               <div>
-                <h3 className="text-2xl font-bold mb-4">Simple Payment Links</h3>
+                <h3 className="text-2xl font-bold mb-4">Payment Links</h3>
                 <p className="text-muted-foreground mb-6">
-                  Create and share payment links instantly without any technical setup. Perfect for small businesses, freelancers, and remote sales.
+                  Generate and share custom payment links via SMS, email, or WhatsApp to collect payments anytime, anywhere without a website or app.
                 </p>
                 <ul className="space-y-4">
                   <li className="flex items-start">
                     <CheckCircle2 className="h-5 w-5 text-primary mr-2 mt-0.5" />
-                    <span>Create payment links in seconds without any coding</span>
+                    <span>Create payment links in seconds</span>
                   </li>
                   <li className="flex items-start">
                     <CheckCircle2 className="h-5 w-5 text-primary mr-2 mt-0.5" />
-                    <span>Share via email, SMS, WhatsApp, or social media</span>
+                    <span>Share via email, SMS, or WhatsApp</span>
                   </li>
                   <li className="flex items-start">
                     <CheckCircle2 className="h-5 w-5 text-primary mr-2 mt-0.5" />
-                    <span>Customize with your brand logo and colors</span>
-                  </li>
-                  <li className="flex items-start">
-                    <CheckCircle2 className="h-5 w-5 text-primary mr-2 mt-0.5" />
-                    <span>Set expiry dates and payment limits</span>
+                    <span>Smart payment links for secure collections</span>
                   </li>
                   <li className="flex items-start">
                     <CheckCircle2 className="h-5 w-5 text-primary mr-2 mt-0.5" />
                     <span>Track payment status in real-time</span>
                   </li>
-                  <li className="flex items-start">
-                    <CheckCircle2 className="h-5 w-5 text-primary mr-2 mt-0.5" />
-                    <span>Generate QR codes for in-person payments</span>
-                  </li>
                 </ul>
                 <div className="mt-6 flex flex-wrap gap-4">
-                  <Button>
-                    Get Started
-                  </Button>
+                  <Button>Get Started</Button>
                   <Link href="/pricing">
-                    <Button variant="outline">
-                      View Pricing
-                    </Button>
+                    <Button variant="outline">View Pricing</Button>
                   </Link>
                 </div>
               </div>
               <div className="relative">
                 <div className="aspect-video bg-gradient-to-br from-primary/20 to-primary/10 rounded-xl flex items-center justify-center">
                   <img 
-                    src="/placeholder.svg?height=300&width=500" 
+                    src="https://t4.ftcdn.net/jpg/05/57/68/21/240_F_557682120_A12qU9QcoFaUiioAO6psjXlUV7767goA.jpg" 
                     alt="Payment Links Interface" 
-                    className="rounded-lg shadow-lg max-w-[90%] mx-auto"
+                    className="rounded-lg shadow-lg h-full w-full mx-auto"
                   />
                 </div>
               </div>
@@ -138,18 +172,14 @@ export default function ProductsPage() {
           <TabsContent value="subscription" className="mt-4">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
               <div>
-                <h3 className="text-2xl font-bold mb-4">Subscription Management</h3>
+                <h3 className="text-2xl font-bold mb-4">Subscription & Recurring Payments</h3>
                 <p className="text-muted-foreground mb-6">
-                  Automate recurring payments with flexible billing cycles and plans. Perfect for SaaS, membership sites, and subscription businesses.
+                  Set up automated recurring payments using eNACH and e-mandates, perfect for subscription-based services.
                 </p>
                 <ul className="space-y-4">
                   <li className="flex items-start">
                     <CheckCircle2 className="h-5 w-5 text-primary mr-2 mt-0.5" />
-                    <span>Create flexible subscription plans with custom billing cycles</span>
-                  </li>
-                  <li className="flex items-start">
-                    <CheckCircle2 className="h-5 w-5 text-primary mr-2 mt-0.5" />
-                    <span>Offer free trials, setup fees, and discounts</span>
+                    <span>Flexible subscription plans with custom billing cycles</span>
                   </li>
                   <li className="flex items-start">
                     <CheckCircle2 className="h-5 w-5 text-primary mr-2 mt-0.5" />
@@ -161,86 +191,66 @@ export default function ProductsPage() {
                   </li>
                   <li className="flex items-start">
                     <CheckCircle2 className="h-5 w-5 text-primary mr-2 mt-0.5" />
-                    <span>Comprehensive subscription analytics and reporting</span>
-                  </li>
-                  <li className="flex items-start">
-                    <CheckCircle2 className="h-5 w-5 text-primary mr-2 mt-0.5" />
-                    <span>Customer portal for self-service management</span>
+                    <span>Comprehensive subscription analytics</span>
                   </li>
                 </ul>
                 <div className="mt-6 flex flex-wrap gap-4">
-                  <Button>
-                    Get Started
-                  </Button>
+                  <Button>Get Started</Button>
                   <Link href="/pricing">
-                    <Button variant="outline">
-                      View Pricing
-                    </Button>
+                    <Button variant="outline">View Pricing</Button>
                   </Link>
                 </div>
               </div>
               <div className="relative">
                 <div className="aspect-video bg-gradient-to-br from-primary/20 to-primary/10 rounded-xl flex items-center justify-center">
                   <img 
-                    src="/placeholder.svg?height=300&width=500" 
-                    alt="Subscription Management Interface" 
-                    className="rounded-lg shadow-lg max-w-[90%] mx-auto"
+                    src="https://cdn.dribbble.com/userupload/9462007/file/original-a6bc23910f256a0713ddca7e0ffbffec.jpg?format=webp&resize=450x338&vertical=center" 
+                    alt="Subscription Payments Interface" 
+                    className="rounded-lg shadow-lg w-full h-full mx-auto"
                   />
                 </div>
               </div>
             </div>
           </TabsContent>
           
-          <TabsContent value="invoicing" className="mt-4">
+          <TabsContent value="b2b" className="mt-4">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
               <div>
-                <h3 className="text-2xl font-bold mb-4">Smart Invoicing</h3>
+                <h3 className="text-2xl font-bold mb-4">B2B & Enterprise Solutions</h3>
                 <p className="text-muted-foreground mb-6">
-                  Generate and send professional invoices to your customers automatically. Perfect for service businesses, agencies, and freelancers.
+                  Manage large-scale transactions, vendor payouts, and enterprise-level payment solutions with bulk transaction processing and high security.
                 </p>
                 <ul className="space-y-4">
                   <li className="flex items-start">
                     <CheckCircle2 className="h-5 w-5 text-primary mr-2 mt-0.5" />
-                    <span>Create professional invoices with your branding</span>
+                    <span>Automated payout solutions for vendors and salaries</span>
                   </li>
                   <li className="flex items-start">
                     <CheckCircle2 className="h-5 w-5 text-primary mr-2 mt-0.5" />
-                    <span>Schedule recurring invoices for regular clients</span>
+                    <span>Bulk transaction processing</span>
                   </li>
                   <li className="flex items-start">
                     <CheckCircle2 className="h-5 w-5 text-primary mr-2 mt-0.5" />
-                    <span>Automated payment reminders and follow-ups</span>
+                    <span>High-security standards for enterprise needs</span>
                   </li>
                   <li className="flex items-start">
                     <CheckCircle2 className="h-5 w-5 text-primary mr-2 mt-0.5" />
-                    <span>Track invoice status and payment history</span>
-                  </li>
-                  <li className="flex items-start">
-                    <CheckCircle2 className="h-5 w-5 text-primary mr-2 mt-0.5" />
-                    <span>Generate tax-compliant receipts automatically</span>
-                  </li>
-                  <li className="flex items-start">
-                    <CheckCircle2 className="h-5 w-5 text-primary mr-2 mt-0.5" />
-                    <span>Multiple currency support and automatic tax calculation</span>
+                    <span>Real-time monitoring and management</span>
                   </li>
                 </ul>
                 <div className="mt-6 flex flex-wrap gap-4">
-                  <Button>
-                    Get Started
-                  </Button>
+                  <Button>Get Started</Button>
                   <Link href="/pricing">
-                    <Button variant="outline">
-                      View Pricing
-                    </Button>
+                    <Button variant="outline">View Pricing</Button>
                   </Link>
                 </div>
               </div>
               <div className="relative">
                 <div className="aspect-video bg-gradient-to-br from-primary/20 to-primary/10 rounded-xl flex items-center justify-center">
                   <img 
-                    src="/placeholder.svg?height=300&width=500" 
-                    alt="Invoicing Interface" 
-                    className="rounded-lg shadow-lg max-w-[90%] mx-auto"
+                    src="https://img.freepik.com/free-vector/gradient-b2b-illustration_23-2149322240.jpg?uid=R186909835&semt=ais_hybrid" 
+                    alt="B2B Solutions Interface" 
+                    className="rounded-lg shadow-lg w-full h-full mx-auto"
                   />
                 </div>
               </div>
@@ -249,54 +259,47 @@ export default function ProductsPage() {
         </Tabs>
       </section>
       
-      {/* Additional Products */}
+      {/* How It Works */}
       <section className="bg-slate-50 py-16">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold tracking-tight mb-4">More Payment Solutions</h2>
+            <h4 className="text-3xl font-bold tracking-tight mb-4">How It Works?</h4>
             <p className="text-muted-foreground max-w-2xl mx-auto">
-              Explore our additional products designed to help your business grow.
+              Get started with our payment solutions in just a few simple steps.
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             <div className="bg-white p-6 rounded-lg shadow-sm">
-              <div className="mb-4">
-                <Wallet className="h-10 w-10 text-primary" />
-              </div>
-              <h3 className="text-xl font-semibold mb-2">Digital Wallet</h3>
-              <p className="text-muted-foreground mb-4">
-                Offer your customers a secure digital wallet for faster checkout and improved conversion rates.
+              <div className="mb-4 text-2xl font-bold">1️⃣</div>
+              <h3 className="text-xl font-semibold mb-2">Sign Up & Get Verified</h3>
+              <p className="text-muted-foreground">
+                Quick onboarding with easy KYC verification.
               </p>
-              <Button variant="outline" className="w-full">
-                Learn More <ArrowRight className="ml-2 h-4 w-4" />
-              </Button>
             </div>
             
             <div className="bg-white p-6 rounded-lg shadow-sm">
-              <div className="mb-4">
-                <CreditCardIcon className="h-10 w-10 text-primary" />
-              </div>
-              <h3 className="text-xl font-semibold mb-2">Virtual Cards</h3>
-              <p className="text-muted-foreground mb-4">
-                Issue virtual cards for your team to manage expenses and control spending in real-time.
+              <div className="mb-4 text-2xl font-bold">2️⃣</div>
+              <h3 className="text-xl font-semibold mb-2">Integrate the API</h3>
+              <p className="text-muted-foreground">
+                Seamlessly integrate with your website, app, or ERP system.
               </p>
-              <Button variant="outline" className="w-full">
-                Learn More <ArrowRight className="ml-2 h-4 w-4" />
-              </Button>
             </div>
             
             <div className="bg-white p-6 rounded-lg shadow-sm">
-              <div className="mb-4">
-                <BarChart className="h-10 w-10 text-primary" />
-              </div>
-              <h3 className="text-xl font-semibold mb-2">Advanced Analytics</h3>
-              <p className="text-muted-foreground mb-4">
-                Gain valuable insights into your payment flows, customer behavior, and business performance.
+              <div className="mb-4 text-2xl font-bold">3️⃣</div>
+              <h3 className="text-xl font-semibold mb-2">Accept Payments Instantly</h3>
+              <p className="text-muted-foreground">
+                Start accepting payments via multiple channels.
               </p>
-              <Button variant="outline" className="w-full">
-                Learn More <ArrowRight className="ml-2 h-4 w-4" />
-              </Button>
+            </div>
+            
+            <div className="bg-white p-6 rounded-lg shadow-sm">
+              <div className="mb-4 text-2xl font-bold">4️⃣</div>
+              <h3 className="text-xl font-semibold mb-2">Monitor & Manage</h3>
+              <p className="text-muted-foreground">
+                Track transactions and payouts in real-time from a dedicated dashboard.
+              </p>
             </div>
           </div>
         </div>
@@ -323,29 +326,29 @@ export default function ProductsPage() {
           </div>
           
           <div className="bg-white p-6 rounded-lg shadow-sm border border-gray-100">
-            <h3 className="text-xl font-semibold mb-2">SaaS & Subscription</h3>
-            <p className="text-muted-foreground mb-4">
-              Manage recurring billing, reduce churn, and scale your subscription business.
-            </p>
-            <Link href="#" className="text-primary hover:underline flex items-center">
-              Learn More <ArrowRight className="ml-1 h-4 w-4" />
-            </Link>
-          </div>
-          
-          <div className="bg-white p-6 rounded-lg shadow-sm border border-gray-100">
-            <h3 className="text-xl font-semibold mb-2">Marketplaces</h3>
-            <p className="text-muted-foreground mb-4">
-              Split payments, manage escrow, and handle multi-party transactions seamlessly.
-            </p>
-            <Link href="#" className="text-primary hover:underline flex items-center">
-              Learn More <ArrowRight className="ml-1 h-4 w-4" />
-            </Link>
-          </div>
-          
-          <div className="bg-white p-6 rounded-lg shadow-sm border border-gray-100">
             <h3 className="text-xl font-semibold mb-2">Education</h3>
             <p className="text-muted-foreground mb-4">
               Process tuition payments, manage installment plans, and handle donations.
+            </p>
+            <Link href="#" className="text-primary hover:underline flex items-center">
+              Learn More <ArrowRight className="ml-1 h-4 w-4" />
+            </Link>
+          </div>
+          
+          <div className="bg-white p-6 rounded-lg shadow-sm border border-gray-100">
+            <h3 className="text-xl font-semibold mb-2">Retail</h3>
+            <p className="text-muted-foreground mb-4">
+              Accept payments in-store and online with QR codes and digital wallets.
+            </p>
+            <Link href="#" className="text-primary hover:underline flex items-center">
+              Learn More <ArrowRight className="ml-1 h-4 w-4" />
+            </Link>
+          </div>
+          
+          <div className="bg-white p-6 rounded-lg shadow-sm border border-gray-100">
+            <h3 className="text-xl font-semibold mb-2">B2B Services</h3>
+            <p className="text-muted-foreground mb-4">
+              Manage vendor payouts and large-scale transactions efficiently.
             </p>
             <Link href="#" className="text-primary hover:underline flex items-center">
               Learn More <ArrowRight className="ml-1 h-4 w-4" />
